@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <h2>Study Access</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="upload.html">Upload</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="developers.html">Developers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html" class="active"> Register </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- #HERO# -->
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Download High Quality Notes For Every Course</h1>
+
+        <p>
+          Study Access provides free notes for Computer Science, Medical,
+          Business, Engineering, Commerce and many more.
+        </p>
+
+        <div class="search-box">
+          <input type="text" placeholder="Search Notes, Subjects, Courses..." />
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search
+          </button>
+        </div>
+
+        <div class="hero-buttons">
+          <button class="primary">Explore Notes</button>
+          <button class="secondary">Upload Notes</button>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=700"
+          alt="Students"
+        />
+      </div>
+    </section>
+
+<!-- #CATEGORY# -->
+
+    <section class="category">
+      <h2>Popular Categories</h2>
+
+      <div class="category-container">
+        <div class="category-card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Computer Science</h3>
+          <p>HTML CSS JavaScript Python Java DBMS OS</p>
+        </div>
+
+        <div class="category-card">
+          <i class="fa-solid fa-user-doctor"></i>
+          <h3>Medical</h3>
+          <p>MBBS Nursing Anatomy Physiology BDS</p>
+        </div>
+
+        <div class="category-card">
+          <i class="fa-solid fa-briefcase"></i>
+          <h3>Business</h3>
+          <p>MBA BBA Finance Economics Marketing</p>
+        </div>
+
+        <div class="category-card">
+          <i class="fa-solid fa-gears"></i>
+          <h3>Engineering</h3>
+          <p>Civil Mechanical Electrical CSE ECE</p>
+        </div>
+      </div>
+    </section>
+
+<!-- #STATS# -->
+
+    <section class="stats">
+      <div class="stat-box">
+        <h2>15K+</h2>
+        <p>Notes</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>500+</h2>
+        <p>Subjects</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>100+</h2>
+        <p>Courses</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>50K+</h2>
+        <p>Students</p>
+      </div>
+    </section>
+
+    <!-- #NOTES# -->
+
+    <section class="notes">
+      <h2>Featured Notes</h2>
+
+      <div class="notes-container">
+        
+        <div class="note-card">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500"
+            alt="HTML & CSS Notes"/>
+          <h3>HTML & CSS Notes</h3>
+          <p>BCA Semester 2</p>
+          <div class="rating">★★★★★</div>
+          <button onclick="downloadPDF('https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/CSS_Complete_Notes.pdf')">Download PDF</button>
+        </div>
+
+        <div class="note-card">
+          <img
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500"
+            alt="Java Programming Notes"/>
+          <h3>Java Programming</h3>
+          <p>BCA Semester 3</p>
+          <div class="rating">★★★★★</div>
+          <button onclick="downloadPDF('https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Java_Complete_Notes.pdf')">Download PDF</button>
+        </div>
+
+        <div class="note-card">
+          <img
+            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500"
+            alt="Operating System Notes"/>
+          <h3>Operating System</h3>
+          <p>BCA Semester 4</p>
+          <div class="rating">★★★★☆</div>
+          <button onclick="downloadPDF('https://sriindu.ac.in/wp-content/uploads/2023/10/R20CSE2202-OPERATING-SYSTEMS.pdf')">Download PDF</button>
+        </div>
+      </div>
+    </section>
+
+<!-- #LATEST NOTES# -->
+
+    <section class="latest-notes">
+      <h2>Latest Uploaded Notes</h2>
+
+      <div class="notes-container">
+        <div class="note-card">
+          <h3>Database Management System</h3>
+          <p><strong>Course:</strong> BCA</p>
+          <p><strong>Semester:</strong> 4th</p>
+          <p><strong>Uploaded By:</strong> Kishan Singh</p>
+          <button>View PDF</button>
+        </div>
+
+        <div class="note-card">
+          <h3>Human Anatomy</h3>
+          <p><strong>Course:</strong> MBBS</p>
+          <p><strong>Semester:</strong> 2nd</p>
+          <p><strong>Uploaded By:</strong> Sumit Kumar</p>
+          <button>View PDF</button>
+        </div>
+
+        <div class="note-card">
+          <h3>Financial Accounting</h3>
+          <p><strong>Course:</strong> BBA</p>
+          <p><strong>Semester:</strong> 1st</p>
+          <p><strong>Uploaded By:</strong> Rohit Kumar</p>
+          <button>View PDF</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- #WHY CHOOSE US# -->
+
+    <section class="why-us">
+      <h2>Why Choose Study Access?</h2>
+
+      <div class="why-container">
+        <div class="feature-box">
+          <i class="fa-solid fa-book"></i>
+          <h3>Free Notes</h3>
+          <p>Download quality study material without paying anything.</p>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+          <h3>Easy Download</h3>
+          <p>Download notes in one click in PDF format.</p>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-layer-group"></i>
+          <h3>Organized Courses</h3>
+          <p>Notes are arranged course-wise and semester-wise.</p>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h3>Responsive Design</h3>
+          <p>Works perfectly on desktop, tablet and mobile.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- #STUDENT REVIEWS# -->
+
+    <section class="reviews">
+      <h2>Student Reviews</h2>
+
+      <div class="review-container">
+        <div class="review-card">
+          <h3>Vishwas Dhaka</h3>
+          <p>★★★★★</p>
+          <p>Very useful website. I found all my semester notes easily.</p>
+        </div>
+
+        <div class="review-card">
+          <h3>Vansh</h3>
+          <p>★★★★★</p>
+          <p>Clean design and fast downloading. Highly recommended.</p>
+        </div>
+
+        <div class="review-card">
+          <h3>Devender</h3>
+          <p>★★★★☆</p>
+          <p>Great platform for engineering and computer science students.</p>
+        </div>
+      </div>
+    </section>
+
+<!-- #Frequently Asked Questions# -->
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="question">
+        <h3>Is Study Access free?</h3>
+        <p>Yes. Students can access and download notes free of cost.</p>
+      </div>
+
+      <div class="question">
+        <h3>Can I upload my notes?</h3>
+        <p>Yes. Registered users can upload notes for other students.</p>
+      </div>
+
+      <div class="question">
+        <h3>Which courses are available?</h3>
+        <p>
+          Computer Science, Business, Medical, Engineering, Commerce, Arts and
+          many more.
+        </p>
+      </div>
+    </section>
+
+    <!-- #SUBSCRIBE# -->
+
+    <section class="newsletter">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Get updates whenever new notes are uploaded.</p>
+      <input type="email" placeholder="Enter your email" />
+      <button>Subscribe</button>
+    </section>
+
+<!-- #FOOTER# -->
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Study Access</h3>
+          <p>
+            Study Access is a platform where students can access quality study
+            notes, upload learning resources and help each other succeed.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="notes.html">Notes</a>
+          <a href="upload.html">Upload</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Support</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="developers.html">Developers</a>
+          <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <p class="copyright">© 2026 Study Access | All Rights Reserved.</p>
+      <p class="credits">Made with ❤️ by Vishwas Dhaka</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

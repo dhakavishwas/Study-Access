@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Access | Register</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header>
+      <div class="logo">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <h2>Study Access</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="upload.html">Upload</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="developers.html">Developers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="register.html" class="active"> Register </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================ HERO ================= -->
+
+    <section class="page-hero">
+      <div class="hero-content">
+        <h1>Create Your Study Access Account</h1>
+        <p>
+          Join thousands of students sharing and accessing quality study notes
+          from different courses and universities.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= REGISTER ================= -->
+
+    <section class="register-section">
+      <div class="register-container">
+        <div class="register-left">
+          <h2>Why Register?</h2>
+          <div class="feature">
+            <i class="fa-solid fa-book"></i>
+            <div>
+              <h3>Access Notes</h3>
+              <p>Download notes from different branches.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <i class="fa-solid fa-upload"></i>
+            <div>
+              <h3>Upload Notes</h3>
+              <p>Help other students by sharing notes.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <i class="fa-solid fa-bookmark"></i>
+            <div>
+              <h3>Bookmarks</h3>
+              <p>Save your favourite notes for later.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <i class="fa-solid fa-users"></i>
+            <div>
+              <h3>Student Community</h3>
+              <p>Connect with learners from different fields.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+
+        <div class="register-right">
+          <form id="registerForm">
+            <h2>Create Account</h2>
+            <p>Fill in the details below.</p>
+            <div class="input-box">
+              <label>Full Name</label>
+
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label>Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label>Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label>Course</label>
+              <select required>
+                <option>Select Course</option>
+                <option>BCA</option>
+                <option>B.Tech</option>
+                <option>BBA</option>
+                <option>B.Com</option>
+                <option>MCA</option>
+                <option>MBA</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="input-box">
+              <label>Password</label>
+              <div class="password-box">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Create Password"
+                  required
+                />
+
+                <i
+                  class="fa-solid fa-eye toggle-password"
+                  onclick="togglePassword('password', this)"
+                ></i>
+              </div>
+
+              <small id="strengthText">Password Strength</small>
+            </div>
+
+            <div class="input-box">
+              <label>Confirm Password</label>
+              <div class="password-box">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Confirm Password"
+                  required
+                />
+
+                <i
+                  class="fa-solid fa-eye toggle-password"
+                  onclick="togglePassword('confirmPassword', this)"
+                ></i>
+              </div>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" id="terms" required />
+
+              <label for="terms">
+                I agree to the
+                <a href="#">Terms & Conditions</a>
+
+                and
+
+                <a href="#">Privacy Policy</a>
+              </label>
+            </div>
+
+            <button type="submit" class="register-btn">
+              <i class="fa-solid fa-user-plus"></i>
+
+              Create Account
+            </button>
+            <p class="login-text">
+              Already have an account?
+
+              <a href="login.html"> Login </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Study Access</h3>
+          <p>
+            Study Access is a platform where students can access quality study
+            notes, upload learning resources and help each other succeed.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="notes.html">Notes</a>
+          <a href="upload.html">Upload</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Support</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="developers.html">Developers</a>
+          <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <p class="copyright">© 2026 Study Access | All Rights Reserved.</p>
+      <p class="credits">Made with ❤️ by Vishwas Dhaka</p>
+    </footer>
+
+    <!-- ============== REGISTER PAGE CSS ============== -->
+
+    <style>
+      .page-hero {
+        background: linear-gradient(135deg, #2563eb, #4f46e5);
+        color: #fff;
+        text-align: center;
+        padding: 70px 20px;
+      }
+
+      .page-hero h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+      }
+
+      .page-hero p {
+        max-width: 700px;
+        margin: auto;
+        font-size: 18px;
+      }
+
+      .register-section {
+        padding: 60px 8%;
+      }
+
+      .register-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .register-left {
+        background: #2563eb;
+        color: #fff;
+        padding: 40px;
+        border-radius: 15px;
+      }
+
+      .register-left h2 {
+        margin-bottom: 30px;
+      }
+
+      .feature {
+        display: flex;
+        gap: 18px;
+        margin: 25px 0;
+        align-items: flex-start;
+      }
+
+      .feature i {
+        font-size: 26px;
+      }
+
+      .register-right {
+        background: #fff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      }
+
+      .register-right h2 {
+        margin-bottom: 10px;
+      }
+
+      .register-right p {
+        color: #666;
+        margin-bottom: 25px;
+      }
+
+      .input-box {
+        margin-bottom: 20px;
+      }
+
+      .input-box label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .input-box input,
+      .input-box select {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 15px;
+        outline: none;
+      }
+
+      .password-box {
+        position: relative;
+      }
+
+      .password-box i {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #777;
+      }
+
+      .checkbox {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+        align-items: flex-start;
+      }
+
+      .checkbox input {
+        margin-top: 5px;
+      }
+
+      .checkbox a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+
+      .register-btn {
+        width: 100%;
+        background: #2563eb;
+        color: #fff;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .register-btn:hover {
+        background: #1d4ed8;
+      }
+
+      .login-text {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .login-text a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .footer-box a {
+        display: block;
+        color: #d1d5db;
+        margin: 10px 0;
+        text-decoration: none;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .social-icons a {
+        color: #fff;
+        font-size: 22px;
+      }
+
+      @media (max-width: 900px) {
+        .register-container {
+          grid-template-columns: 1fr;
+        }
+
+        .page-hero h1 {
+          font-size: 32px;
+        }
+      }
+    </style>
+
+    <script>
+      // ================= SHOW / HIDE PASSWORD =================
+
+      function togglePassword(id, icon) {
+        const input = document.getElementById(id);
+
+        if (input.type === "password") {
+          input.type = "text";
+
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+        } else {
+          input.type = "password";
+
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
+        }
+      }
+
+      // ================= PASSWORD STRENGTH =================
+
+      const password = document.getElementById("password");
+      const strength = document.getElementById("strengthText");
+
+      password.addEventListener("keyup", function () {
+        let value = password.value;
+
+        if (value.length == 0) {
+          strength.innerHTML = "Password Strength";
+          strength.style.color = "#777";
+        } else if (value.length < 6) {
+          strength.innerHTML = "Weak Password";
+          strength.style.color = "red";
+        } else if (value.length < 10) {
+          strength.innerHTML = "Medium Password";
+          strength.style.color = "orange";
+        } else {
+          strength.innerHTML = "Strong Password";
+          strength.style.color = "green";
+        }
+      });
+
+      // ================= FORM VALIDATION =================
+
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let name = document.getElementById("name").value.trim();
+          let email = document.getElementById("email").value.trim();
+          let phone = document.getElementById("phone").value.trim();
+          let pass = document.getElementById("password").value;
+          let confirm = document.getElementById("confirmPassword").value;
+          if (name === "") {
+            alert("Please enter your name.");
+            return;
+          }
+
+          if (email === "") {
+            alert("Please enter your email.");
+            return;
+          }
+
+          if (phone.length < 10) {
+            alert("Please enter a valid phone number.");
+            return;
+          }
+
+          if (pass.length < 6) {
+            alert("Password must contain at least 6 characters.");
+            return;
+          }
+
+          if (pass !== confirm) {
+            alert("Passwords do not match.");
+            return;
+          }
+
+          if (!document.getElementById("terms").checked) {
+            alert("Please accept the Terms & Conditions.");
+            return;
+          }
+
+          alert("🎉 Registration Successful!\n\nWelcome to Study Access.");
+          this.reset();
+          strength.innerHTML = "Password Strength";
+          strength.style.color = "#777";
+        });
+    </script>
+  </body>
+</html>

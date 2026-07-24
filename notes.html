@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Study Access | Notes</title>
+<link rel='stylesheet' href='style.css'>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+</head>
+<body>
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <h2>Study Access</h2>
+    </div>
+    <style>
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: #111827;
+        margin-top: 50px;
+      }    
+
+    .copyright{
+    text-align:center;
+    color:#9ca3af;
+}
+
+    .credits{
+    text-align:center;
+    color:#9ca3af;
+    margin-top:5px;
+}   
+
+    .logo i{
+    color:#2563eb;
+    font-size:28px;
+    }   
+
+    .popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-content{
+    width:90%;
+    max-width:700px;
+    max-height:80vh;
+    overflow-y:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.note-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.note-item button{
+    padding:8px 15px;
+    cursor:pointer;
+}
+
+.credits{
+    text-align:center;
+    color:#9ca3af;
+    margin-top:5px;
+}
+
+.footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+}
+
+.footer-box a {
+        display: block;
+        color: #d1d5db;
+        margin: 10px 0;
+        text-decoration: none;
+}
+
+.social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+}
+
+.social-icons a {
+        color: #fff;
+        font-size: 22px;
+}
+
+@media (max-width: 900px) {
+        .register-container {
+        grid-template-columns: 1fr;
+}
+
+.page-hero h1 {
+        font-size: 32px;
+}
+}
+    </style>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="developers.html">Developers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html" class="register-btn">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class='hero'>
+<div class='hero-text'>
+<h1>Notes Library</h1>
+<p>Search notes from every branch.</p>
+<div class='search-box'>
+<input id='searchInput' placeholder='Search notes...'>
+<button>Search</button>
+</div>
+</div>
+<p id="noResults" style="display:none;text-align:center;font-size:18px;color:#666;margin-top:20px;">No notes found.</p>
+</section>
+
+<section class='category'>
+<h2>Browse by Branch</h2>
+<div class='category-container'>
+    
+<div class="category-card">
+    <h3>💻 Computer Science</h3>
+    <p>BCA, MCA, B.Tech CSE, B.Sc CS</p>
+    <button onclick="openNotes('Computer Science')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>🏥 Medical Science</h3>
+    <p>MBBS, BDS, Nursing, Pharmacy</p>
+    <button onclick="openNotes('Medical Science')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>💼 Business</h3>
+    <p>BBA, MBA, Finance</p>
+    <button onclick="openNotes('Business')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>💰 Commerce</h3>
+    <p>B.Com, M.Com, CA</p>
+    <button onclick="openNotes('Commerce')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>⚙️ Engineering</h3>
+    <p>Civil, Mechanical, CSE</p>
+    <button onclick="openNotes('Engineering')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>⚖️ Law</h3>
+    <p>LLB, LLM</p>
+    <button onclick="openNotes('Law')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>🎨 Arts</h3>
+    <p>History, English</p>
+    <button onclick="openNotes('Arts')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>🔬 Science</h3>
+    <p>Physics, Chemistry</p>
+    <button onclick="openNotes('Science')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>👩‍🏫 Education</h3>
+    <p>B.Ed</p>
+    <button onclick="openNotes('Education')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>🌾 Agriculture</h3>
+    <p>Agriculture</p>
+    <button onclick="openNotes('Agriculture')">Browse Notes</button>
+</div>
+
+<div class="category-card">
+    <h3>📜 IT Certifications</h3>
+    <p>Python, AI, Web Dev</p>
+    <button onclick="openNotes('IT Certifications')">Browse Notes</button>
+    </div>
+
+</div>
+</section>
+
+<section class='notes'>
+<h2>Available Notes</h2>
+<div class='notes-container'>
+<div class="note-card">
+    <h3>HTML & CSS Notes</h3>
+    <p><b>Branch:</b> Computer Science</p>
+    <p>BCA Sem 2</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/HTML_Complete_Notes.pdf')">Preview PDF</button> 
+    <button onclick="downloadPDF('https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/HTML_Complete_Notes.pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Human Anatomy</h3>
+    <p><b>Branch:</b> Medical</p>
+    <p>MBBS</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://dulomix.com/wp-content/uploads/2023/03/HAP-UNIT-1-IMPERFECT-PHARMACY.pdf')" >Preview PDF</button>
+    <button onclick="downloadPDF('https://dulomix.com/wp-content/uploads/2023/03/HAP-UNIT-1-IMPERFECT-PHARMACY.pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Financial Accounting</h3>
+    <p><b>Branch:</b> Commerce</p>
+    <p>B.Com</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://dodldu.in/pdf/4_B.Com-General-103%20(1st%20Semester).pdf')">Preview PDF</button> 
+    <button onclick="downloadPDF('https://dodldu.in/pdf/4_B.Com-General-103%20(1st%20Semester).pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Marketing Management</h3>
+    <p><b>Branch:</b> Business</p>
+    <p>MBA</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://dpvipracollege.in/wp-content/uploads/2023/01/Marketing-Management.pdf')">Preview PDF</button> 
+    <button onclick="downloadPDF('https://dpvipracollege.in/wp-content/uploads/2023/01/Marketing-Management.pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Constitutional Law</h3>
+    <p><b>Branch:</b> Law</p>
+    <p>LLB</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://tndalu.ac.in/econtent/10_Constitutional_Law_I.pdf')">Preview PDF</button>
+    <button onclick="downloadPDF('https://tndalu.ac.in/econtent/10_Constitutional_Law_I.pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Engineering Mechanics</h3>
+    <p><b>Branch:</b> Engineering</p>
+    <p>B.Tech</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://www.iitg.ac.in/rkbc/me101/Presentation/L01-03.pdf')">Preview PDF</button> 
+    <button onclick="downloadPDF('https://www.iitg.ac.in/rkbc/me101/Presentation/L01-03.pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Organic Chemistry</h3>
+    <p><b>Branch:</b> Science</p>
+    <p>B.Sc</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://bitmesra.ac.in/UploadedDocuments/adminchem/files/CH111-M3-NOMENCLATURE.pdf')">Preview PDF</button> 
+    <button onclick="downloadPDF('https://bitmesra.ac.in/UploadedDocuments/adminchem/files/CH111-M3-NOMENCLATURE.pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Educational Psychology</h3>
+    <p><b>Branch:</b> Education</p>
+    <p>B.Ed</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://mkuniversity.ac.in/new/centre/cer/docs/PSYCHOLOGY%20IN%20EDUCATION.pdf')">Preview PDF</button> 
+    <button onclick="downloadPDF('https://mkuniversity.ac.in/new/centre/cer/docs/PSYCHOLOGY%20IN%20EDUCATION.pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Crop Production</h3>
+    <p><b>Branch:</b> Agriculture</p>
+    <p>B.Sc Agri</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://www.miteshrathiclasses.com/web_components/pdf/class-8th-science-rivision-notes.pdf')">Preview PDF</button> 
+    <button onclick="downloadPDF('https://www.miteshrathiclasses.com/web_components/pdf/class-8th-science-rivision-notes.pdf')">Download PDF</button>
+</div>
+
+<div class="note-card">
+    <h3>Python Programming</h3>
+    <p><b>Branch:</b> IT Certifications</p>
+    <p>Certificate</p>
+    <div class="rating">★★★★★</div>
+    <button onclick="previewPDF('https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Python_Complete_Notes.pdf')">Preview PDF</button> 
+    <button onclick="downloadPDF('https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Python_Complete_Notes.pdf')">Download PDF</button>
+</div>
+
+</div>
+</section>
+
+<section class='newsletter'>
+<h2>Upload Your Notes</h2>
+<p>Help students by sharing quality study material.</p>
+<a href='upload.html'><button>Upload Notes</button></a>
+</section>
+
+ <footer>
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Study Access</h3>
+          <p>
+            Study Access is a platform where students can access quality study
+            notes, upload learning resources and help each other succeed.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="notes.html">Notes</a>
+          <a href="upload.html">Upload</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Support</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="developers.html">Developers</a>
+          <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <p class="copyright">© 2026 Study Access | All Rights Reserved.</p>
+      <p class="credits">Made with ❤️ by Vishwas Dhaka</p>
+    </footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".note-card");
+const noResults = document.getElementById("noResults");
+
+function filterNotes(){
+ const value=searchInput.value.toLowerCase().trim();
+ let visible=0;
+ cards.forEach(card=>{
+   const t=card.textContent.toLowerCase();
+   if(t.includes(value)){card.style.display="";visible++;}
+   else{card.style.display="none";}
+ });
+ noResults.style.display=visible===0?"block":"none";
+}
+searchInput.addEventListener("input",filterNotes);
+searchInput.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();filterNotes();}});
+document.querySelector(".search-box button").addEventListener("click",filterNotes);
+
+function previewPDF(url){
+    window.open(url, "_blank");
+}
+
+function downloadPDF(url){
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+// Function to open notes in a popup
+
+const notes = {
+
+"Computer Science":[
+["HTML Notes","pdfs/HTML.pdf"],
+["CSS Notes","pdfs/CSS.pdf"],
+["Java Notes","pdfs/JAVA.pdf"],
+["JavaScript Notes","pdfs/JS.pdf"],
+["DSA","pdfs/DSA.pdf"],
+],
+
+"Medical Science":[
+["Human Anatomy","pdfs/ANATOMY_PHYSIOLOGY.pdf"],
+["Pharmacology","pdfs/Pharma.pdf"],
+],
+
+"Business":[
+["Marketing","pdfs/marketing.pdf"],
+["Business Management","pdfs/business.pdf"],
+["Finance","pdfs/finance.pdf"]
+],
+
+"Commerce":[
+["Accounting","pdfs/accounting.pdf"],
+["Economics","pdfs/economics.pdf"]
+],
+
+"Engineering":[
+["Engineering Mathematics","pdfs/maths.pdf"],
+["Mechanics","pdfs/mechanics.pdf"]
+],
+
+"Law":[
+["Constitution","pdfs/law.pdf"],
+["IPC","pdfs/ipc.pdf"]
+],
+
+"Arts":[
+["History","pdfs/history.pdf"],
+["English","pdfs/english.pdf"]
+],
+
+"Science":[
+["Physics","pdfs/physics.pdf"],
+["Chemistry","pdfs/chemistry.pdf"],
+["Biology","pdfs/biology.pdf"]
+],
+
+"Education":[
+["Educational Psychology","pdfs/education.pdf"]
+],
+
+"Agriculture":[
+["Crop Production","pdfs/crop.pdf"],
+["Soil Science","pdfs/soil.pdf"]
+],
+
+"IT Certifications":[
+["Python","pdfs/python.pdf"],
+["AI","pdfs/ai.pdf"],
+["Web Development","pdfs/web.pdf"]
+]
+
+};
+
+function openNotes(category){
+document.getElementById("popupTitle").innerHTML=category+" Notes";
+
+let html="";
+notes[category].forEach(function(note){
+
+html+=`
+<div class="note-item">
+<span>${note[0]}</span>
+
+<a href="${note[1]}" download>
+<button>Download</button>
+</a>
+</div>
+`;
+
+});
+
+document.getElementById("popupNotes").innerHTML=html;
+document.getElementById("notesPopup").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("notesPopup").style.display="none";
+}
+
+window.onclick=function(e){
+if(e.target==document.getElementById("notesPopup")){
+closePopup();
+}
+}
+</script>
+
+<div id="notesPopup" class="popup">
+
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 id="popupTitle"></h2>
+        <div id="popupNotes"></div>
+    </div>
+
+</div>
+</body>
+</html>

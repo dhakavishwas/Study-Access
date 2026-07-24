@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Access | Developers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Poppins, sans-serif;
+        background: #f5f7fb;
+      }
+
+      .logo i{
+         color:#2563eb;
+        font-size:28px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 8%;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      nav a {
+        text-decoration: none;
+        margin: 0 12px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #2563eb, #000);
+        color: #fff;
+        text-align: center;
+        padding: 70px 20px;
+      }
+
+      .hero p{
+        color:#f5f7fb
+      }
+
+      .team {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+      }
+
+      .card img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #2563eb;
+        display: block;
+        margin: 0 auto 15px;
+      }
+
+      .role {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 6px 14px;
+        background: #2563eb;
+        color: #fff;
+        border-radius: 20px;
+      }
+
+      .bio {
+        color: #555;
+        line-height: 1.7;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 18px 0;
+      }
+
+      .skills span {
+        background: #eef4ff;
+        color: #2563eb;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+      }
+
+      .social a {
+        display: inline-flex;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #2563eb;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        margin: 5px;
+      }
+
+      .social a:hover {
+        background: #1d4ed8;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .footer-box a {
+        display: block;
+        color: #d1d5db;
+        margin: 10px 0;
+        text-decoration: none;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .social-icons a {
+        color: #fff;
+        font-size: 22px;
+      }
+
+      @media (max-width: 900px) {
+        .register-container {
+          grid-template-columns: 1fr;
+        }
+
+        .page-hero h1 {
+          font-size: 32px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+    <div class="logo">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <h2>Study Access</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="developers.html">Developers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html" class="register-btn">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="hero">
+      <h1>Meet Our Development Team</h1>
+      <p>The people who designed and built Study Access.</p>
+    </section>
+
+    <section class="team">
+      <div class="team-grid">
+        <div class="card">
+          <img
+            src="https://i.pinimg.com/736x/e8/fc/8c/e8fc8c6bd82cb7f3512e301387ba50cb.jpg"
+          />
+          <h2>Vishwas</h2>
+          <div class="role">👨‍💻 Team Leader & Frontend Developer</div>
+          <p class="bio">
+            Led the project, designed the interface, and developed responsive
+            pages using HTML, CSS and JavaScript.
+          </p>
+          <div class="skills">
+            <span>HTML5</span><span>CSS3</span><span>UI Design</span>
+          </div>
+          <div class="social">
+            <a href="https://github.com/dhakavishwas"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vishwas-dhaka-9a07563aa"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:dhakavishwas777@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/1e/33/70/1e33705ec84ba8fbce504d737a6b314e.jpg" />
+          <h2>Vansh</h2>
+          <div class="role">💻 JavaScript Developer</div>
+          <p class="bio">
+            Developed interactive components, search features, and website
+            functionality.
+          </p>
+          <div class="skills">
+            <span>JavaScript</span>
+            <span>Debugging</span>
+          </div>
+          <div class="social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+<footer>
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Study Access</h3>
+          <p>
+            Study Access is a platform where students can access quality study
+            notes, upload learning resources and help each other succeed.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="notes.html">Notes</a>
+          <a href="upload.html">Upload</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Support</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="developers.html">Developers</a>
+          <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <p class="copyright">© 2026 Study Access | All Rights Reserved.</p>
+      <p class="credits">Made with ❤️ by Vishwas Dhaka</p>
+    </footer>
+   
+  </body>
+</html>
